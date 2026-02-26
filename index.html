@@ -4,14 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultraviolet Booking Agency</title>
-    <!--
-      Ultraviolet Booking Agency
-      A clean, modern website template for a booking agency.
-      The design uses a muted violet color scheme and responsive layouts to
-      present artists, services, and contact information in a professional
-      manner. Images for the artist cards are placeholders and should be
-      replaced with actual promotional photography when available.
-    -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,68 +13,41 @@
             <div class="logo">Ultraviolet</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#artists">Artists</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="#booking">Booking</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <div class="hero-content">
-            <h1>Ultraviolet Booking Agency</h1>
-            <p>Your portal to unforgettable performances</p>
-            <a href="#contact" class="btn-primary">Book Now</a>
+            <h1>Ultraviolet Booking</h1>
+            <p>Boutique representation &amp; live bookings.</p>
+            <a href="#contact" class="btn-primary">Inquire About Booking</a>
         </div>
     </header>
 
     <main>
         <!-- Introduction / welcome -->
         <section id="home" class="intro">
-            <h2>Welcome</h2>
+            <h2>Live Shows. Properly Handled.</h2>
             <p>
-                Ultraviolet Booking Agency connects outstanding artists with venues worldwide.
-                We provide professional booking and management services to ensure successful
-                events and memorable experiences for both performers and audiences. Whether
-                you're looking to book a headline act or curate a unique showcase, our
-                dedicated team is here to help.
+                Ultraviolet Booking represents select independent artists for live performances,
+                festivals, and curated events. We work directly with venues and promoters to
+                ensure professional communication, clear contracts, and smooth execution from
+                inquiry to show day.
             </p>
         </section>
 
-        <!-- Artists roster -->
-        <section id="artists" class="artists">
-            <h2>Our Artists</h2>
-            <div class="artist-grid">
-                <div class="artist-card">
-                    <img src="https://via.placeholder.com/300x300?text=Artist+1" alt="Artist 1">
-                    <h3>Artist 1</h3>
-                    <p>A brief description of the artist and their style.</p>
-                </div>
-                <div class="artist-card">
-                    <img src="https://via.placeholder.com/300x300?text=Artist+2" alt="Artist 2">
-                    <h3>Artist 2</h3>
-                    <p>A brief description of the artist and their style.</p>
-                </div>
-                <div class="artist-card">
-                    <img src="https://via.placeholder.com/300x300?text=Artist+3" alt="Artist 3">
-                    <h3>Artist 3</h3>
-                    <p>A brief description of the artist and their style.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services offered -->
-        <section id="services" class="services">
-            <h2>Services</h2>
+        <!-- Booking information -->
+        <section id="booking" class="booking">
+            <h2>Booking</h2>
             <ul>
-                <li>Artist Booking &amp; Management</li>
-                <li>Event Planning &amp; Coordination</li>
-                <li>Marketing &amp; Promotion</li>
-                <li>Tour Logistics</li>
+                <li>Club shows</li>
+                <li>Festival appearances</li>
+                <li>College events</li>
+                <li>Private curated events</li>
             </ul>
             <p>
-                We tailor our services to match your needs and ensure that both artists and
-                venues thrive. Our team handles everything from contract negotiation to
-                promotional outreach so you can focus on creating a memorable event. Contact
-                us to learn more about how we can help bring your vision to life.
+                For availability, rates, and technical riders, please submit a booking inquiry below.
             </p>
         </section>
 
@@ -90,11 +55,10 @@
         <section id="about" class="about">
             <h2>About Us</h2>
             <p>
-                With years of experience in the music and entertainment industry, Ultraviolet
-                Booking Agency is dedicated to representing talent with integrity and
-                professionalism. Our passion for music drives us to deliver outstanding
-                service, from intimate showcases to large‑scale tours. We believe in
-                building lasting relationships and championing the artists we represent.
+                Ultraviolet Booking is an independent booking operation focused on structured,
+                professional live representation. We prioritize clear communication, efficient
+                contracting, and long‑term relationships with promoters and venues.
+                Based in New York.
             </p>
         </section>
 
@@ -102,8 +66,8 @@
         <section id="contact" class="contact">
             <h2>Contact Us</h2>
             <p>
-                Ready to book an artist or have questions? Reach out to us via the form
-                below or send an email to <a href="mailto:info@ultravioletagency.com">info@ultravioletagency.com</a>.
+                For booking inquiries, include your event date, location, venue capacity, and budget range.
+                Email us at <a href="mailto:bookings@ultravioletbooking.com">bookings@ultravioletbooking.com</a>.
             </p>
             <form action="#" method="post" class="contact-form">
                 <div class="form-group">
@@ -116,7 +80,9 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="6" placeholder="Tell us about your event" required></textarea>
+                    <textarea id="message" name="message" rows="6"
+                        placeholder="Please include event details and any requirements"
+                        required></textarea>
                 </div>
                 <button type="submit" class="btn-primary">Send Message</button>
             </form>

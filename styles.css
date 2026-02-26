@@ -1,0 +1,272 @@
+/*
+  Stylesheet for Ultraviolet Booking Agency
+  A muted violet color palette gives this site a polished, modern look.
+  The layout uses CSS Grid and Flexbox for responsive design and offers
+  sensible defaults for common components such as buttons, navigation
+  elements and forms.
+*/
+
+/* Color variables for easy customization */
+:root {
+    --primary-color: #6c4c87;      /* muted violet for highlights and buttons */
+    --secondary-color: #9676b6;    /* lighter violet for hover states */
+    --background-color: #f8f5fb;   /* very light violet/white for page background */
+    --surface-color: #ffffff;      /* white surfaces like cards */
+    --text-color: #333333;         /* dark gray for primary text */
+    --link-color: #6c4c87;         /* link color matches primary */
+}
+
+/* Global reset and typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* Hero section */
+header.hero {
+    /* Use a gradient instead of an external image for the hero background.
+       This avoids the need to upload additional assets when deploying to
+       services like GitHub Pages. The gradient transitions from the
+       primary violet shade to a darker hue to create depth. */
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3d2e58 100%);
+    color: #ffffff;
+    position: relative;
+    min-height: 60vh;
+}
+
+/* Overlay to darken the hero image for contrast */
+header.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 24, 63, 0.6);
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color);
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 120px 5% 80px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+}
+
+/* Primary button */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Sections */
+main section {
+    padding: 60px 5%;
+}
+
+.intro,
+.services,
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* Artists grid */
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.artist-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.artist-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.artist-card p {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* Services list */
+.services ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+.services li {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+    position: relative;
+    padding-left: 20px;
+}
+
+.services li::before {
+    content: '\2022'; /* Bullet point */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Contact form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #2f2143;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .btn-primary {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}

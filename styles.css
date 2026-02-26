@@ -270,3 +270,27 @@ section h2 {
         font-size: 0.9rem;
     }
 }
+
+/* Booking list inherits the same styling as services */
+.booking ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+.booking li {
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--primary-color);
+    position: relative;
+    padding-left: 20px;
+}
+
+.booking li::before {
+    content: '\2022';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
